@@ -1,10 +1,12 @@
-<!DOCTYPE html><html lang="en" style=""><head>
-<meta charset="utf-8">
-<meta class="" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport">
+<!DOCTYPE html>
+
+<html lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta class="" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
 <title>Pratham Rangoonwala — Portfolio</title>
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&amp;family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&amp;family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <style>
     /* ==========================================================================
        RESET & BASE STYLES
@@ -1548,7 +1550,7 @@
 </head>
 <body>
 <!-- ================= STUDIO GHIBLI STYLED UNIFIED TOP NAVIGATION BAR (MATCHING REFERENCE IMAGE) ================= -->
-<header class="ghibli-navbar is-night-nav" id="ghibliNavbar">
+<header class="ghibli-navbar" id="ghibliNavbar">
 <a class="nav-brand-logo" href="#hero">
 <span class="nav-brand-leaf">🍃</span>
 <span class="">Pratham R.</span>
@@ -1571,7 +1573,7 @@
 <a aria-label="Slide 5 Contact" class="slide-dot" href="#contact" title="Contact Screen"></a>
 </aside>
 <!-- ================= PAGE 1 / SECTION 1: HERO SECTION ================= -->
-<section class="viewport-slide hero-slide is-night" id="hero">
+<section class="viewport-slide hero-slide" id="hero">
 <!-- Dynamic Sky Scene (Crossfades on Toggle) -->
 <div class="sky-stage" id="skyStage">
 <!-- Day Sky Gradient -->
@@ -1579,7 +1581,7 @@
 <!-- Night Sky Gradient -->
 <div class="sky-night"></div>
 <!-- Sun -->
-<div class="celestial-sun" title="Morning sun glowing over the hills" style="position: absolute; top: 13%; right: 18%; width: 110px; height: 110px; border-radius: 50%; background: radial-gradient(circle, rgb(255, 253, 240) 0%, rgb(255, 231, 160) 50%, rgba(255, 215, 100, 0.4) 75%, transparent 100%); box-shadow: rgba(255, 230, 140, 0.7) 0px 0px 60px, rgba(255, 210, 100, 0.4) 0px 0px 120px; filter: blur(1px); transition: transform 1.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 1.2s; animation: 6s ease-in-out 0s infinite alternate none running gentle-glow;" data-stitch-orig-opacity="1"></div>
+<div class="celestial-sun" data-stitch-orig-opacity="1" style="position: absolute; top: 13%; right: 18%; width: 110px; height: 110px; border-radius: 50%; background: radial-gradient(circle, rgb(255, 253, 240) 0%, rgb(255, 231, 160) 50%, rgba(255, 215, 100, 0.4) 75%, transparent 100%); box-shadow: rgba(255, 230, 140, 0.7) 0px 0px 60px, rgba(255, 210, 100, 0.4) 0px 0px 120px; filter: blur(1px); transition: transform 1.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 1.2s; animation: 6s ease-in-out 0s infinite alternate none running gentle-glow;" title="Morning sun glowing over the hills"></div>
 <!-- Moon -->
 <div class="celestial-moon" title="Crescent night glow"></div>
 <!-- Night Stars -->
@@ -1612,15 +1614,15 @@
 <!-- Rolling Hills Silhouette (Layered SVGs) -->
 <div aria-hidden="true" class="hills-stage">
 <!-- Back hill -->
-<svg class="hill-svg" preserveAspectRatio="none" viewBox="0 0 1440 380">
+<svg class="hill-svg" preserveaspectratio="none" viewbox="0 0 1440 380">
 <path class="hill-back-day" d="M0,220 C240,170 480,240 720,180 C960,120 1200,200 1440,160 L1440,380 L0,380 Z"></path>
 </svg>
 <!-- Mid hill -->
-<svg class="hill-svg" preserveAspectRatio="none" viewBox="0 0 1440 380">
+<svg class="hill-svg" preserveaspectratio="none" viewbox="0 0 1440 380">
 <path class="hill-mid-day" d="M0,260 C320,190 600,290 920,220 C1180,160 1340,240 1440,210 L1440,380 L0,380 Z"></path>
 </svg>
 <!-- Front hill with rolling meadow curve -->
-<svg class="hill-svg" preserveAspectRatio="none" viewBox="0 0 1440 380">
+<svg class="hill-svg" preserveaspectratio="none" viewbox="0 0 1440 380">
 <path class="hill-front-day" d="M0,300 C280,240 550,330 840,280 C1100,230 1320,290 1440,270 L1440,380 L0,380 Z"></path>
 </svg>
 </div>
@@ -1639,10 +1641,10 @@
 <p class="hero-tagline">Aspiring Data Scientist • MSc IT Student</p>
 <p class="hero-bio">Aspiring Data Scientist | Python • SQL • Pandas • Matplotlib • Power BI. Turning complex numbers and messy datasets into clean, actionable, and visual narratives.</p>
 <div class="hero-actions">
-<a class="btn-ghibli-primary" href="mailto:prathamrangoon2007@gmail.com"><svg class="" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><span class="">Email</span></a>
-<a class="btn-ghibli-secondary" href="https://github.com/Pratham719" rel="noopener noreferrer" target="_blank"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg><span class="label-desktop">GitHub Profile</span><span class="label-mobile">GitHub</span></a>
+<a class="btn-ghibli-primary" href="mailto:prathamrangoon2007@gmail.com"><svg class="" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><span class="">Email</span></a>
+<a class="btn-ghibli-secondary" href="https://github.com/Pratham719" rel="noopener noreferrer" target="_blank"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg><span class="label-desktop">GitHub Profile</span><span class="label-mobile">GitHub</span></a>
 <a class="btn-ghibli-secondary" href="https://www.linkedin.com/in/pratham-ds?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" rel="noopener noreferrer" target="_blank">
-<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
 <span class="">LinkedIn</span>
 </a>
 </div>
@@ -1651,9 +1653,9 @@
 <div class="hero-portrait-card" style="position: relative; display: flex; justify-content: center; align-items: center; overflow: visible;">
 <div class="portrait-round-halo"></div>
 <div class="portrait-image-wrapper round-frame">
-<img alt="Pratham Kirtibhai Rangoonwala - MSc IT Student &amp; Aspiring Data Scientist" class="portrait-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-_34W7Jr-2tsUqi5SVaeVMEXD-m1PWgb3psIxQEfW7FbQDqOAdriQivyMZDcWFsnnuWrBmMloQVOEhW-yfmoRku1r58HxwA0QkjkfUSvJ57do0xCCFCoTpT5b7_A428is8z8Jr8kBGUt5p4U23nb-RJbQMF2SM4qc7TFQXJCjbgXJmjRoiSO2rxb_PEF3yo-LxPSZuIYAPsArzXEtIvetNs7_h2EbadFyFv-jpt4VDUEJtjqCTjPvJB1px5efvc4zbQ">
+<img alt="Pratham Kirtibhai Rangoonwala - MSc IT Student &amp; Aspiring Data Scientist" class="portrait-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-_34W7Jr-2tsUqi5SVaeVMEXD-m1PWgb3psIxQEfW7FbQDqOAdriQivyMZDcWFsnnuWrBmMloQVOEhW-yfmoRku1r58HxwA0QkjkfUSvJ57do0xCCFCoTpT5b7_A428is8z8Jr8kBGUt5p4U23nb-RJbQMF2SM4qc7TFQXJCjbgXJmjRoiSO2rxb_PEF3yo-LxPSZuIYAPsArzXEtIvetNs7_h2EbadFyFv-jpt4VDUEJtjqCTjPvJB1px5efvc4zbQ"/>
 </div>
-<button aria-label="Toggle between Day and Night sky theme" class="sky-toggle-nav-btn" id="skyToggleBtn" style="position: absolute; bottom: -10px; right: -10px; z-index: 40; background: rgb(255, 255, 253); border: 1px solid rgba(220, 210, 190, 0.85); box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 14px; border-radius: 9999px; padding: 0.4rem 0.95rem; font-size: 0.84rem; font-weight: 600; color: rgb(45, 55, 72); display: inline-flex; align-items: center; gap: 0.45rem; cursor: pointer; white-space: nowrap;"><span class="">☀️ Day Sky</span></button></div>
+<button aria-label="Toggle between Day and Night sky theme" class="sky-toggle-nav-btn" id="skyToggleBtn" style="position: absolute; bottom: -10px; right: -10px; z-index: 40; background: rgb(255, 255, 253); border: 1px solid rgba(220, 210, 190, 0.85); box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 14px; border-radius: 9999px; padding: 0.4rem 0.95rem; font-size: 0.84rem; font-weight: 600; color: rgb(45, 55, 72); display: inline-flex; align-items: center; gap: 0.45rem; cursor: pointer; white-space: nowrap;"><span class="">🌙 Night Sky</span></button></div>
 </div>
 </div>
 </section>
@@ -1721,7 +1723,7 @@
 <!-- 1. Python (Official Python Logo SVG) -->
 <div class="skill-badge-animated delay-0" title="Python Programming Language">
 <span class="skill-icon-svg">
-<svg fill="none" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewbox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
 <path d="M63.385 0.5C31.547 0.5 33.535 14.33 33.535 14.33l.044 14.323h30.41v4.326H21.57S.5 30.655.5 62.99c0 32.33 18.36 31.18 18.36 31.18h10.96V78.715s-.6-18.46 18.16-18.46h31.066s17.27.29 17.27-16.71V17.065S89.585.5 63.385.5zM46.73 9.87a4.93 4.93 0 11.002 9.86 4.93 4.93 0 01-.002-9.86z" fill="#387EB8"></path>
 <path d="M64.615 127.5c31.838 0 29.85-13.83 29.85-13.83l-.044-14.323h-30.41v-4.326h42.42s21.07 2.324 21.07-30.01c0-32.336-18.36-31.18-18.36-31.18h-10.96v15.454s.6 18.46-18.16 18.46H49.015s-17.27-.29-17.27 16.71v26.474s-3.268 16.565 32.87 16.565zm16.655-9.37a4.93 4.93 0 11-.002-9.86 4.93 4.93 0 01.002 9.86z" fill="#FFE052"></path>
 </svg>
@@ -1731,7 +1733,7 @@
 <!-- 2. SQL (Official Relational Database Cylinder & Query SVG) -->
 <div class="skill-badge-animated delay-1" title="Structured Query Language (SQL)">
 <span class="skill-icon-svg">
-<svg fill="none" stroke="#2E5339" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<svg fill="none" stroke="#2E5339" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
 <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
 <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
 <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
@@ -1742,7 +1744,7 @@
 <!-- 3. Data Analysis (Clean Analytical Trend Chart SVG) -->
 <div class="skill-badge-animated delay-2" title="Data Analysis &amp; Analytics">
 <span class="skill-icon-svg">
-<svg fill="none" stroke="#C28E3A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<svg fill="none" stroke="#C28E3A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
 <path d="M3 3v18h18"></path>
 <path d="M18 9l-5 5-4-4-6 6"></path>
 <circle cx="18" cy="9" fill="#C28E3A" r="1.5"></circle>
@@ -1753,7 +1755,7 @@
 <!-- 4. Exploratory Data Analysis (EDA - Data Exploration Lens SVG) -->
 <div class="skill-badge-animated delay-3" title="Exploratory Data Analysis (EDA)">
 <span class="skill-icon-svg">
-<svg fill="none" stroke="#2E5339" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<svg fill="none" stroke="#2E5339" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
 <circle cx="10" cy="10" r="7"></circle>
 <line x1="21" x2="15" y1="21" y2="15"></line>
 <path d="M7 11l2-2 2 2 3-3"></path>
@@ -1764,7 +1766,7 @@
 <!-- 5. Pandas (Official Pandas Logo SVG) -->
 <div class="skill-badge-animated delay-4" title="Pandas Data Analysis Library">
 <span class="skill-icon-svg">
-<svg fill="none" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewbox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
 <rect fill="#130754" height="40" rx="3" width="18" x="18" y="44"></rect>
 <rect fill="#FF4A00" height="100" rx="3" width="18" x="42" y="14"></rect>
 <rect fill="#E70488" height="72" rx="3" width="18" x="68" y="28"></rect>
@@ -1776,7 +1778,7 @@
 <!-- 6. NumPy (Official NumPy Logo SVG) -->
 <div class="skill-badge-animated delay-5" title="NumPy Scientific Computing">
 <span class="skill-icon-svg">
-<svg fill="none" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewbox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
 <path d="M64 4L116 34v60L64 124 12 94V34L64 4z" fill="#4D77CF" opacity="0.15"></path>
 <path d="M64 4L12 34l52 30 52-30L64 4z" fill="#4DABCF"></path>
 <path d="M12 34v60l52 30V64L12 34z" fill="#013243"></path>
@@ -1789,7 +1791,7 @@
 <!-- 7. Matplotlib (Official Matplotlib Plotting SVG) -->
 <div class="skill-badge-animated delay-6" title="Matplotlib Data Plotting">
 <span class="skill-icon-svg">
-<svg fill="none" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewbox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
 <circle cx="64" cy="64" fill="#11557C" opacity="0.12" r="58"></circle>
 <circle cx="64" cy="64" r="56" stroke="#11557C" stroke-width="4"></circle>
 <path d="M22 84c16-2 26-48 42-48s24 44 42 22" fill="none" stroke="#FF7F0E" stroke-linecap="round" stroke-width="6"></path>
@@ -1803,7 +1805,7 @@
 <!-- 8. Seaborn (Official Seaborn Distribution Wave SVG) -->
 <div class="skill-badge-animated delay-7" title="Seaborn Statistical Plots">
 <span class="skill-icon-svg">
-<svg fill="none" height="18" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 128 128" width="18" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" height="18" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 128 128" width="18" xmlns="http://www.w3.org/2000/svg">
 <path d="M14 96 C 36 96, 44 32, 64 32 C 84 32, 92 96, 114 96" fill="none" stroke="#4C72B0" stroke-width="7"></path>
 <path d="M22 96 C 40 96, 48 50, 64 50 C 80 50, 88 96, 106 96" fill="none" opacity="0.85" stroke="#55A868" stroke-width="5.5"></path>
 <path d="M30 96 C 44 96, 52 68, 64 68 C 76 68, 84 96, 98 96" fill="none" opacity="0.75" stroke="#C44E52" stroke-width="4.5"></path>
@@ -1814,7 +1816,7 @@
 <!-- 9. Data Visualization (Vector Palette & Visual Dashboard Icon) -->
 <div class="skill-badge-animated delay-8" title="Data Visualization &amp; Visual Narratives">
 <span class="skill-icon-svg">
-<svg fill="none" stroke="#2E5339" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<svg fill="none" stroke="#2E5339" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
 <rect height="18" rx="2" width="18" x="3" y="3"></rect>
 <path d="M7 17v-4"></path>
 <path d="M12 17V7"></path>
@@ -1826,7 +1828,7 @@
 <!-- 10. Power BI (Official Microsoft Power BI Bar Logo SVG) -->
 <div class="skill-badge-animated delay-9" title="Microsoft Power BI">
 <span class="skill-icon-svg">
-<svg fill="none" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewbox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
 <rect fill="#E8B200" height="48" rx="4" width="22" x="18" y="64"></rect>
 <rect fill="#F2C811" height="70" rx="4" width="22" x="46" y="42"></rect>
 <rect fill="#F9DE58" height="92" rx="4" width="22" x="74" y="20"></rect>
@@ -1837,7 +1839,7 @@
 <!-- 11. MySQL / MariaDB (Official Dolphin / MariaDB Vector SVG) -->
 <div class="skill-badge-animated delay-10" title="MySQL / MariaDB Relational Databases">
 <span class="skill-icon-svg">
-<svg fill="none" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewbox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
 <path d="M112 78c-6-16-22-26-38-26-10 0-22 4-29 11-4-9-13-16-23-17-1 0-2 0-3 .2C13 47 6 57 8 70c2 12 11 20 22 22 14 2 27-5 33-16 6 8 16 12 27 11 11-1 20-7 22-19z" fill="#00758F" opacity="0.2"></path>
 <path d="M106 72c-4-12-16-20-28-20-7 0-16 3-21 8-3-7-10-12-17-13-1 0-2 0-2 .1C31 48 26 55 28 65c1 9 8 15 16 16 10 1 20-4 24-12 5 6 12 9 20 8 8-1 15-5 18-15z" fill="#00758F"></path>
 <circle cx="84" cy="58" fill="#F29111" r="2.5"></circle>
@@ -1849,7 +1851,7 @@
 <!-- 12. Git (Official Git Branching Logo SVG) -->
 <div class="skill-badge-animated delay-11" title="Git Distributed Version Control">
 <span class="skill-icon-svg">
-<svg fill="none" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewbox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
 <path d="M124.7 57.3L70.7 3.3c-4.4-4.4-11.6-4.4-16 0L39.3 18.7l20.2 20.2c4.7-1.6 10.2-.5 13.9 3.2 3.7 3.7 4.8 9.2 3.2 13.9l19.5 19.5c4.7-1.6 10.2-.5 13.9 3.2 5.5 5.5 5.5 14.5 0 20-5.5 5.5-14.5 5.5-20 0-4.1-4.1-5.1-10.2-2.9-15.2L68.8 65.2v30.4c1.3 1.1 2.4 2.5 3.2 4.1 3.9 7.8.8 17.3-7 21.2s-17.3.8-21.2-7c-3.9-7.8-.8-17.3 7-21.2 2.6-1.3 5.4-1.8 8.2-1.6V60.7c-2.8.2-5.6-.4-8.2-1.6-5-2.5-8.2-7.5-8.2-13 0-2.3.6-4.6 1.6-6.6L24.1 19.4 3.3 40.2c-4.4 4.4-4.4 11.6 0 16l54 54c4.4 4.4 11.6 4.4 16 0l51.4-51.4c4.4-4.4 4.4-11.5 0-15.9v.4z" fill="#F05032"></path>
 </svg>
 </span>
@@ -1858,7 +1860,7 @@
 <!-- 13. GitHub (Official GitHub Octocat Silhouette SVG) -->
 <div class="skill-badge-animated delay-12" title="GitHub Code Collaboration">
 <span class="skill-icon-svg">
-<svg fill="#181717" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg fill="#181717" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
 </svg>
 </span>
@@ -1891,7 +1893,7 @@
 <span class="focus-tag">Pandas (EDA &amp; cleaning)</span>
 <span class="focus-tag">Streamlit (deployment)</span>
 <span class="focus-tag">Plotly</span>
-<a class="focus-tag" href="https://nassau-candy-revenue-analysis-2026.streamlit.app/" rel="noopener noreferrer" style="margin-left: auto; margin-top: 0.4rem; background: var(--accent-moss); color: rgb(248, 245, 238); display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.86rem; text-decoration: none; padding: 0.65rem 1.25rem; border-radius: 999px; box-shadow: rgba(46, 83, 57, 0.3) 0px 4px 14px; transition: 0.3s;" target="_blank"><span class="">Live Dashboard</span><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg></a></div>
+<a class="focus-tag" href="https://nassau-candy-revenue-analysis-2026.streamlit.app/" rel="noopener noreferrer" style="margin-left: auto; margin-top: 0.4rem; background: var(--accent-moss); color: rgb(248, 245, 238); display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.86rem; text-decoration: none; padding: 0.65rem 1.25rem; border-radius: 999px; box-shadow: rgba(46, 83, 57, 0.3) 0px 4px 14px; transition: 0.3s;" target="_blank"><span class="">Live Dashboard</span><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg></a></div>
 </div>
 <!-- Project 2: Afficionado Coffee Roasters Retail Sales Analysis -->
 <div class="focus-card">
@@ -1908,7 +1910,7 @@
 <span class="focus-tag">Streamlit (deployment)</span>
 <span class="focus-tag">Matplotlib</span>
 <span class="focus-tag">Seaborn</span>
-<a class="focus-tag" href="https://coffee-revenue-dashboard-2026.streamlit.app/" rel="noopener noreferrer" style="margin-left: auto; margin-top: 0.4rem; background: var(--accent-moss); color: rgb(248, 245, 238); display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.86rem; text-decoration: none; padding: 0.65rem 1.25rem; border-radius: 999px; box-shadow: rgba(46, 83, 57, 0.3) 0px 4px 14px; transition: 0.3s;" target="_blank"><span class="">Live Dashboard</span><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg></a></div>
+<a class="focus-tag" href="https://coffee-revenue-dashboard-2026.streamlit.app/" rel="noopener noreferrer" style="margin-left: auto; margin-top: 0.4rem; background: var(--accent-moss); color: rgb(248, 245, 238); display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.86rem; text-decoration: none; padding: 0.65rem 1.25rem; border-radius: 999px; box-shadow: rgba(46, 83, 57, 0.3) 0px 4px 14px; transition: 0.3s;" target="_blank"><span class="">Live Dashboard</span><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg></a></div>
 </div>
 </div>
 </div>
@@ -1924,33 +1926,33 @@
             Whether you have an internship opportunity, a project collaboration, or just want to discuss data science, my inbox is always open.
           </p>
 <a class="btn-ghibli-primary" href="mailto:prathamrangoon2007@gmail.com">
-<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
 <span class="">Send an Email</span>
-</a><div class="" style="margin-top: 1.75rem; display: flex; align-items: center; gap: 0.65rem; font-family: var(--font-hand); font-size: 1.45rem; color: var(--accent-moss); font-style: italic; width: 100%;"><span class="" style="color: rgb(180, 122, 22); font-weight: 700; font-family: var(--font-serif); font-size: 1.35rem; line-height: 1;">“</span><span class="" style="letter-spacing: 0.01em; color: var(--accent-moss);">Thanks for stopping by — hope you liked the sky</span><span class="" style="color: rgb(180, 122, 22); font-weight: 700; font-family: var(--font-serif); font-size: 1.35rem; line-height: 1;">”</span><svg fill="rgba(146, 192, 165, 0.35)" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" style="color: var(--accent-moss); filter: drop-shadow(0 2px 5px rgba(46, 83, 57, 0.22)); flex-shrink: 0;" viewBox="0 0 24 24" width="26"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg></div>
+</a><div class="" style="margin-top: 1.75rem; display: flex; align-items: center; gap: 0.65rem; font-family: var(--font-hand); font-size: 1.45rem; color: var(--accent-moss); font-style: italic; width: 100%;"><span class="" style="color: rgb(180, 122, 22); font-weight: 700; font-family: var(--font-serif); font-size: 1.35rem; line-height: 1;">“</span><span class="" style="letter-spacing: 0.01em; color: var(--accent-moss);">Thanks for stopping by — hope you liked the sky</span><span class="" style="color: rgb(180, 122, 22); font-weight: 700; font-family: var(--font-serif); font-size: 1.35rem; line-height: 1;">”</span><svg fill="rgba(146, 192, 165, 0.35)" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" style="color: var(--accent-moss); filter: drop-shadow(0 2px 5px rgba(46, 83, 57, 0.22)); flex-shrink: 0;" viewbox="0 0 24 24" width="26"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg></div>
 </div>
 <div>
 <ul class="contact-links-list">
 <li class="">
 <a class="contact-link-row" href="mailto:prathamrangoon2007@gmail.com">
-<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
 <span class="">prathamrangoon2007@gmail.com</span>
 </a>
 </li>
 <li class="">
 <a class="contact-link-row" href="https://github.com/Pratham719" rel="noopener noreferrer" target="_blank">
-<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
 <span class="">github.com/Pratham719</span>
 </a>
 </li>
 <li class="">
 <a class="contact-link-row" href="https://www.linkedin.com/in/pratham-ds?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" rel="noopener noreferrer" target="_blank">
-<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
 <span class="">linkedin.com/in/pratham-ds</span>
 </a>
 </li>
 <li class="">
 <span class="contact-link-row" style="color: var(--text-muted);">
-<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
 <span class="">Surat, Gujarat, India</span>
 </span>
 </li>
@@ -1979,22 +1981,23 @@
       const nav = document.getElementById('ghibliNavbar');
       if(!btn || !hero) return;
 
+      let isNight = false;
+
       function updateState(){
-        const isNight = hero.classList.contains('is-night');
         btn.innerHTML = isNight ? '<span>☀️ Day Sky</span>' : '<span>🌙 Night Sky</span>';
-        if(nav) {
-          if(isNight) {
-            nav.classList.add('is-night-nav');
-          } else {
-            nav.classList.remove('is-night-nav');
-          }
+        if(isNight) {
+          hero.classList.add('is-night');
+          if(nav) nav.classList.add('is-night-nav');
+        } else {
+          hero.classList.remove('is-night');
+          if(nav) nav.classList.remove('is-night-nav');
         }
       }
       updateState();
 
       btn.addEventListener('click', function(e){
         e.stopImmediatePropagation();
-        hero.classList.toggle('is-night');
+        isNight = !isNight;
         updateState();
       }, true);
     })();
@@ -2032,10 +2035,4 @@
 
     slides.forEach(slide => observer.observe(slide));
 </script>
-
-
-
-
-
-
 </body></html>
