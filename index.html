@@ -88,32 +88,31 @@
     }
 
     /* ==========================================================================
-       TOP NAVIGATION BAR (STUDIO GHIBLI STYLED)
+       TOP NAVIGATION BAR (STUDIO GHIBLI STYLED - UNIFIED HEADER)
        ========================================================================== */
     .ghibli-navbar {
       position: fixed;
-      top: 1rem;
+      top: 1.25rem;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 200;
-      width: calc(100% - 2.5rem);
-      max-width: 1120px;
+      width: min(1080px, calc(100% - 2.5rem));
+      z-index: 1000;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.65rem 1.4rem;
-      background: rgba(250, 246, 238, 0.78);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(230, 220, 203, 0.85);
-      border-radius: 999px;
-      box-shadow: 0 8px 32px rgba(44, 38, 33, 0.06);
+      padding: 0.45rem 0.75rem 0.45rem 1.25rem;
       transition: background 0.8s ease, border-color 0.8s ease, box-shadow 0.8s ease;
       box-sizing: border-box;
     }
 
     .is-night-nav.ghibli-navbar {
-      background: rgba(14, 25, 42, 0.82);
+      background: rgba(14, 25, 42, 0.85);
       border-color: rgba(146, 192, 165, 0.25);
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
     }
@@ -123,7 +122,7 @@
       align-items: center;
       gap: 0.6rem;
       font-family: var(--font-serif);
-      font-size: 1.12rem;
+      font-size: 1.15rem;
       font-weight: 600;
       letter-spacing: -0.01em;
       color: var(--text-main);
@@ -137,8 +136,9 @@
 
     .nav-brand-leaf {
       color: var(--accent-moss);
-      font-size: 1rem;
+      font-size: 1.05rem;
       transition: transform 0.3s ease;
+      display: inline-block;
     }
 
     .nav-brand-logo:hover .nav-brand-leaf {
@@ -148,12 +148,12 @@
     .nav-menu-links {
       display: flex;
       align-items: center;
-      gap: 1.6rem;
+      gap: 2rem;
       list-style: none;
     }
 
     .nav-link {
-      font-size: 0.88rem;
+      font-size: 0.92rem;
       font-weight: 500;
       color: var(--text-muted);
       position: relative;
@@ -197,24 +197,22 @@
     .nav-actions-wrap {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
       flex-shrink: 0;
     }
 
     .sky-toggle-nav-btn {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 9999px;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #1e293b;
       display: inline-flex;
       align-items: center;
-      gap: 0.45rem;
-      padding: 0.38rem 0.85rem;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 500;
+      gap: 0.35rem;
       cursor: pointer;
-      border: 1px solid rgba(194, 142, 58, 0.35);
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(8px);
-      color: var(--text-main);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
       transition: all 0.3s ease;
       white-space: nowrap;
     }
@@ -1268,9 +1266,8 @@
       }
     }
 
-    /* Decreased button sizes exclusively on mobile & Android screens */
+    /* Responsive adjustments for mobile */
     @media (max-width: 768px) {
-      /* Mobile text switches */
       .label-desktop {
         display: none !important;
       }
@@ -1282,16 +1279,15 @@
       .ghibli-navbar {
         width: calc(100% - 1.25rem) !important;
         top: 0.6rem !important;
-        padding: 0.45rem 0.85rem !important;
+        padding: 0.42rem 0.65rem 0.42rem 0.85rem !important;
         gap: 0.5rem !important;
-        justify-content: space-between !important;
       }
       .nav-brand-logo {
-        font-size: 0.98rem !important;
+        font-size: 1rem !important;
         gap: 0.4rem !important;
       }
       .nav-brand-leaf {
-        font-size: 0.9rem !important;
+        font-size: 0.95rem !important;
       }
       .nav-menu-links {
         gap: 0.75rem !important;
@@ -1302,12 +1298,12 @@
         display: none;
       }
       .nav-link {
-        font-size: 0.8rem !important;
+        font-size: 0.82rem !important;
         white-space: nowrap;
       }
       .sky-toggle-nav-btn {
-        padding: 0.32rem 0.65rem !important;
-        font-size: 0.74rem !important;
+        padding: 0.3rem 0.65rem !important;
+        font-size: 0.75rem !important;
       }
 
       /* Hero Content & Responsive Heading */
@@ -1340,22 +1336,38 @@
         height: 230px !important;
       }
 
-      /* Hero action buttons: Compact mobile sizing */
+      /* Enforce single-row layout for the 3 hero action buttons on mobile */
       .hero-actions {
-        gap: 0.5rem !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
         justify-content: center !important;
+        align-items: center !important;
+        gap: 0.55rem !important;
+        width: 100% !important;
+        max-width: 420px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
       }
+
       .hero-actions .btn-ghibli-primary,
       .hero-actions .btn-ghibli-secondary {
-        padding: 0.38rem 0.72rem !important;
-        font-size: 0.78rem !important;
-        gap: 0.4rem !important;
-        flex: initial !important;
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        padding: 0.62rem 0.75rem !important;
+        font-size: 0.92rem !important;
+        font-weight: 500 !important;
+        gap: 0.45rem !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+        box-sizing: border-box !important;
       }
+
       .hero-actions .btn-ghibli-primary svg,
       .hero-actions .btn-ghibli-secondary svg {
-        width: 14px !important;
-        height: 14px !important;
+        width: 18px !important;
+        height: 18px !important;
+        flex-shrink: 0 !important;
       }
 
       /* Section Common */
@@ -1367,7 +1379,7 @@
         margin-bottom: 1.25rem !important;
       }
 
-      /* Skills Section Mobile Downscale */
+      /* Skills Section Mobile */
       .skills-intro-text {
         font-size: 0.94rem !important;
         margin-bottom: 1.4rem !important;
@@ -1378,23 +1390,21 @@
         margin-bottom: 1.75rem !important;
       }
       .skills-unified-cluster {
-        gap: 0.45rem 0.45rem !important;
+        gap: 0.65rem 0.65rem !important;
         justify-content: center !important;
       }
       .skill-badge-animated {
-        padding: 0.3rem 0.58rem !important;
-        font-size: 0.74rem !important;
-        gap: 0.42rem !important;
-        border-width: 1px !important;
-        box-shadow: 0 2px 8px rgba(44, 38, 33, 0.04) !important;
+        padding: 0.52rem 0.9rem !important;
+        font-size: 0.88rem !important;
+        gap: 0.55rem !important;
       }
       .skill-icon-svg {
-        width: 14px !important;
-        height: 14px !important;
+        width: 18px !important;
+        height: 18px !important;
       }
       .skill-icon-svg svg {
-        width: 14px !important;
-        height: 14px !important;
+        width: 18px !important;
+        height: 18px !important;
       }
 
       /* Projects Section */
@@ -1444,14 +1454,13 @@
       }
     }
 
-    /* Ultra-compact screens (Android 360px - 430px) */
     @media (max-width: 480px) {
       .ghibli-navbar {
         width: calc(100% - 0.9rem) !important;
-        padding: 0.42rem 0.65rem !important;
+        padding: 0.38rem 0.55rem 0.38rem 0.75rem !important;
       }
-      .nav-brand-logo span:last-child {
-        font-size: 0.9rem !important;
+      .nav-brand-logo {
+        font-size: 0.92rem !important;
       }
       .nav-menu-links {
         gap: 0.55rem !important;
@@ -1462,7 +1471,7 @@
       }
       .sky-toggle-nav-btn {
         padding: 0.28rem 0.52rem !important;
-        font-size: 0.68rem !important;
+        font-size: 0.72rem !important;
       }
       .portrait-image-wrapper.round-frame {
         width: 175px !important;
@@ -1472,24 +1481,33 @@
         width: 200px !important;
         height: 200px !important;
       }
+      .hero-actions {
+        gap: 0.4rem !important;
+        width: 100% !important;
+      }
       .hero-actions .btn-ghibli-primary,
       .hero-actions .btn-ghibli-secondary {
-        padding: 0.35rem 0.65rem !important;
-        font-size: 0.74rem !important;
+        padding: 0.58rem 0.5rem !important;
+        font-size: 0.86rem !important;
         gap: 0.35rem !important;
       }
+      .hero-actions .btn-ghibli-primary svg,
+      .hero-actions .btn-ghibli-secondary svg {
+        width: 16px !important;
+        height: 16px !important;
+      }
       .skill-badge-animated {
-        padding: 0.28rem 0.52rem !important;
-        font-size: 0.72rem !important;
-        gap: 0.38rem !important;
+        padding: 0.48rem 0.8rem !important;
+        font-size: 0.84rem !important;
+        gap: 0.48rem !important;
       }
       .skill-icon-svg {
-        width: 13px !important;
-        height: 13px !important;
+        width: 17px !important;
+        height: 17px !important;
       }
       .skill-icon-svg svg {
-        width: 13px !important;
-        height: 13px !important;
+        width: 17px !important;
+        height: 17px !important;
       }
       .about-lead-text {
         font-size: 1.15rem !important;
@@ -1527,96 +1545,10 @@
       }
     }
   </style>
-<style class="">
-@media (max-width: 768px) {
-  /* Enforce single-row layout for the 3 hero action buttons on mobile */
-  .hero-actions {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 0.55rem !important;
-    width: 100% !important;
-    max-width: 420px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  /* Increase size of hero buttons while keeping them on one line */
-  .hero-actions .btn-ghibli-primary,
-  .hero-actions .btn-ghibli-secondary {
-    flex: 1 1 0 !important;
-    min-width: 0 !important;
-    padding: 0.62rem 0.75rem !important;
-    font-size: 0.92rem !important;
-    font-weight: 500 !important;
-    gap: 0.45rem !important;
-    justify-content: center !important;
-    white-space: nowrap !important;
-    box-sizing: border-box !important;
-  }
-
-  .hero-actions .btn-ghibli-primary svg,
-  .hero-actions .btn-ghibli-secondary svg {
-    width: 18px !important;
-    height: 18px !important;
-    flex-shrink: 0 !important;
-  }
-
-  /* Enlarge skill badges on mobile */
-  .skills-unified-cluster {
-    gap: 0.65rem 0.65rem !important;
-  }
-  .skill-badge-animated {
-    padding: 0.52rem 0.9rem !important;
-    font-size: 0.88rem !important;
-    gap: 0.55rem !important;
-  }
-  .skill-icon-svg {
-    width: 18px !important;
-    height: 18px !important;
-  }
-  .skill-icon-svg svg {
-    width: 18px !important;
-    height: 18px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-actions {
-    gap: 0.4rem !important;
-    width: 100% !important;
-  }
-  .hero-actions .btn-ghibli-primary,
-  .hero-actions .btn-ghibli-secondary {
-    padding: 0.58rem 0.5rem !important;
-    font-size: 0.86rem !important;
-    gap: 0.35rem !important;
-  }
-  .hero-actions .btn-ghibli-primary svg,
-  .hero-actions .btn-ghibli-secondary svg {
-    width: 16px !important;
-    height: 16px !important;
-  }
-  .skill-badge-animated {
-    padding: 0.48rem 0.8rem !important;
-    font-size: 0.84rem !important;
-    gap: 0.48rem !important;
-  }
-  .skill-icon-svg {
-    width: 17px !important;
-    height: 17px !important;
-  }
-  .skill-icon-svg svg {
-    width: 17px !important;
-    height: 17px !important;
-  }
-}
-</style></head>
+</head>
 <body>
-<!-- ================= STUDIO GHIBLI STYLED STICKY TOP NAVIGATION BAR ================= -->
-<header class="ghibli-navbar" id="ghibliNavbar">
+<!-- ================= STUDIO GHIBLI STYLED UNIFIED TOP NAVIGATION BAR (MATCHING REFERENCE IMAGE) ================= -->
+<header class="ghibli-navbar is-night-nav" id="ghibliNavbar">
 <a class="nav-brand-logo" href="#hero">
 <span class="nav-brand-leaf">🍃</span>
 <span class="">Pratham R.</span>
@@ -1629,9 +1561,6 @@
 <li class=""><a class="nav-link" href="#contact">Contact</a></li>
 </ul>
 </nav>
-<div class="nav-actions-wrap">
-<button aria-label="Toggle between Day and Night sky theme" class="sky-toggle-nav-btn" id="skyToggleBtn"><span class="">🌙 Night Sky</span></button>
-</div>
 </header>
 <!-- Side Dot Indicators for Slide Jumping -->
 <aside aria-label="Slide Indicators" class="slide-nav-dots">
@@ -1642,7 +1571,7 @@
 <a aria-label="Slide 5 Contact" class="slide-dot" href="#contact" title="Contact Screen"></a>
 </aside>
 <!-- ================= PAGE 1 / SECTION 1: HERO SECTION ================= -->
-<section class="viewport-slide hero-slide" id="hero">
+<section class="viewport-slide hero-slide is-night" id="hero">
 <!-- Dynamic Sky Scene (Crossfades on Toggle) -->
 <div class="sky-stage" id="skyStage">
 <!-- Day Sky Gradient -->
@@ -1650,7 +1579,7 @@
 <!-- Night Sky Gradient -->
 <div class="sky-night"></div>
 <!-- Sun -->
-<div class="celestial-sun" title="Morning sun glowing over the hills"></div>
+<div class="celestial-sun" title="Morning sun glowing over the hills" style="position: absolute; top: 13%; right: 18%; width: 110px; height: 110px; border-radius: 50%; background: radial-gradient(circle, rgb(255, 253, 240) 0%, rgb(255, 231, 160) 50%, rgba(255, 215, 100, 0.4) 75%, transparent 100%); box-shadow: rgba(255, 230, 140, 0.7) 0px 0px 60px, rgba(255, 210, 100, 0.4) 0px 0px 120px; filter: blur(1px); transition: transform 1.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 1.2s; animation: 6s ease-in-out 0s infinite alternate none running gentle-glow;" data-stitch-orig-opacity="1"></div>
 <!-- Moon -->
 <div class="celestial-moon" title="Crescent night glow"></div>
 <!-- Night Stars -->
@@ -1719,12 +1648,12 @@
 </div>
 </div>
 <!-- Hero Portrait: Completely ROUND Photo -->
-<div class="hero-portrait-card">
+<div class="hero-portrait-card" style="position: relative; display: flex; justify-content: center; align-items: center; overflow: visible;">
 <div class="portrait-round-halo"></div>
 <div class="portrait-image-wrapper round-frame">
-<img alt="Pratham Kirtibhai Rangoonwala - MSc IT Student &amp; Aspiring Data Scientist" class="portrait-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAthXzpu1pfdd0zBHcoiriMQeWJR7gnmXyO9RS09COAQFezXNA2AQ4Kvt-MaZm7CgoQnDOLrY0Q70a176l_nomh86hI7GMqYoFdVrtaNEoh3CfHU7WjnElV1_7TJ2r-OMi8MviaWXwV6rLtqsx7MOvH-xZ9dTg-IyenwHlcM18R9zpFO0MtC4aNcHWwQXYA-DdqRB3CI9TY472UwVA5sDXg3RiKlW4pDqcMOXgriVt0xGvOXmFwz3miwV_broqOCYicQA">
+<img alt="Pratham Kirtibhai Rangoonwala - MSc IT Student &amp; Aspiring Data Scientist" class="portrait-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-_34W7Jr-2tsUqi5SVaeVMEXD-m1PWgb3psIxQEfW7FbQDqOAdriQivyMZDcWFsnnuWrBmMloQVOEhW-yfmoRku1r58HxwA0QkjkfUSvJ57do0xCCFCoTpT5b7_A428is8z8Jr8kBGUt5p4U23nb-RJbQMF2SM4qc7TFQXJCjbgXJmjRoiSO2rxb_PEF3yo-LxPSZuIYAPsArzXEtIvetNs7_h2EbadFyFv-jpt4VDUEJtjqCTjPvJB1px5efvc4zbQ">
 </div>
-</div>
+<button aria-label="Toggle between Day and Night sky theme" class="sky-toggle-nav-btn" id="skyToggleBtn" style="position: absolute; bottom: -10px; right: -10px; z-index: 40; background: rgb(255, 255, 253); border: 1px solid rgba(220, 210, 190, 0.85); box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 14px; border-radius: 9999px; padding: 0.4rem 0.95rem; font-size: 0.84rem; font-weight: 600; color: rgb(45, 55, 72); display: inline-flex; align-items: center; gap: 0.45rem; cursor: pointer; white-space: nowrap;"><span class="">☀️ Day Sky</span></button></div>
 </div>
 </div>
 </section>
@@ -1962,7 +1891,7 @@
 <span class="focus-tag">Pandas (EDA &amp; cleaning)</span>
 <span class="focus-tag">Streamlit (deployment)</span>
 <span class="focus-tag">Plotly</span>
-<a class="focus-tag" href="https://margin-performance-dashboard.streamlit.app" rel="noopener noreferrer" style="margin-left: auto; margin-top: 0.4rem; background: var(--accent-moss); color: rgb(248, 245, 238); display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.86rem; text-decoration: none; padding: 0.65rem 1.25rem; border-radius: 999px; box-shadow: rgba(46, 83, 57, 0.3) 0px 4px 14px; transition: 0.3s;" target="_blank"><span class="">Live Dashboard</span><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg></a></div>
+<a class="focus-tag" href="https://nassau-candy-revenue-analysis-2026.streamlit.app/" rel="noopener noreferrer" style="margin-left: auto; margin-top: 0.4rem; background: var(--accent-moss); color: rgb(248, 245, 238); display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.86rem; text-decoration: none; padding: 0.65rem 1.25rem; border-radius: 999px; box-shadow: rgba(46, 83, 57, 0.3) 0px 4px 14px; transition: 0.3s;" target="_blank"><span class="">Live Dashboard</span><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg></a></div>
 </div>
 <!-- Project 2: Afficionado Coffee Roasters Retail Sales Analysis -->
 <div class="focus-card">
@@ -1997,7 +1926,7 @@
 <a class="btn-ghibli-primary" href="mailto:prathamrangoon2007@gmail.com">
 <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
 <span class="">Send an Email</span>
-</a><div class="" style="margin-top: 1.75rem; display: flex; align-items: center; gap: 0.65rem; font-family: var(--font-hand); font-size: 1.45rem; color: var(--accent-moss); font-style: italic; width: 100%;"><span class="" style="color: #b47a16; font-weight: 700; font-family: var(--font-serif); font-size: 1.35rem; line-height: 1;">“</span><span class="" style="letter-spacing: 0.01em; color: var(--accent-moss);">Thanks for stopping by — hope you liked the sky</span><span class="" style="color: #b47a16; font-weight: 700; font-family: var(--font-serif); font-size: 1.35rem; line-height: 1;">”</span><svg fill="rgba(146, 192, 165, 0.35)" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" style="color: var(--accent-moss); filter: drop-shadow(0 2px 5px rgba(46, 83, 57, 0.22)); flex-shrink: 0;" viewBox="0 0 24 24" width="26"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg></div>
+</a><div class="" style="margin-top: 1.75rem; display: flex; align-items: center; gap: 0.65rem; font-family: var(--font-hand); font-size: 1.45rem; color: var(--accent-moss); font-style: italic; width: 100%;"><span class="" style="color: rgb(180, 122, 22); font-weight: 700; font-family: var(--font-serif); font-size: 1.35rem; line-height: 1;">“</span><span class="" style="letter-spacing: 0.01em; color: var(--accent-moss);">Thanks for stopping by — hope you liked the sky</span><span class="" style="color: rgb(180, 122, 22); font-weight: 700; font-family: var(--font-serif); font-size: 1.35rem; line-height: 1;">”</span><svg fill="rgba(146, 192, 165, 0.35)" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" style="color: var(--accent-moss); filter: drop-shadow(0 2px 5px rgba(46, 83, 57, 0.22)); flex-shrink: 0;" viewBox="0 0 24 24" width="26"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg></div>
 </div>
 <div>
 <ul class="contact-links-list">
@@ -2103,6 +2032,10 @@
 
     slides.forEach(slide => observer.observe(slide));
 </script>
+
+
+
+
 
 
 </body></html>
