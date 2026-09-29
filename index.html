@@ -4,6 +4,10 @@
 <meta charset="utf-8"/>
 <meta class="" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
 <title>Pratham Rangoonwala — Portfolio</title>
+<!-- Favicon / Web Browser Tab Icon -->
+<link href="https://lh3.googleusercontent.com/aida/AEtjO1X0885yTzrSFHhqaDW1KoUjTUuYp9k9pPeuulRlp3Sig8smFUgKsUWE3D9rf8BoDPYQPtHFRlmBjrdXeUIplJD41gaxEB7clwG0dbOif28mTDOhuNvPaM31ugbk7MMAkKeYXVwo_gY0CJebtJSeCzg_FTPxjZYIVq8jzrUsYKIIw498V_Kucigv0UJ1jnxi3d7Wd4uS0W0uFdVlzu2WfHSBpbaZugXecMHSLtRQBzHYNMDHtXfP9DhT2w" rel="icon" type="image/png"/>
+<link href="https://lh3.googleusercontent.com/aida/AEtjO1X0885yTzrSFHhqaDW1KoUjTUuYp9k9pPeuulRlp3Sig8smFUgKsUWE3D9rf8BoDPYQPtHFRlmBjrdXeUIplJD41gaxEB7clwG0dbOif28mTDOhuNvPaM31ugbk7MMAkKeYXVwo_gY0CJebtJSeCzg_FTPxjZYIVq8jzrUsYKIIw498V_Kucigv0UJ1jnxi3d7Wd4uS0W0uFdVlzu2WfHSBpbaZugXecMHSLtRQBzHYNMDHtXfP9DhT2w" rel="shortcut icon" type="image/png"/>
+<link href="https://lh3.googleusercontent.com/aida/AEtjO1X0885yTzrSFHhqaDW1KoUjTUuYp9k9pPeuulRlp3Sig8smFUgKsUWE3D9rf8BoDPYQPtHFRlmBjrdXeUIplJD41gaxEB7clwG0dbOif28mTDOhuNvPaM31ugbk7MMAkKeYXVwo_gY0CJebtJSeCzg_FTPxjZYIVq8jzrUsYKIIw498V_Kucigv0UJ1jnxi3d7Wd4uS0W0uFdVlzu2WfHSBpbaZugXecMHSLtRQBzHYNMDHtXfP9DhT2w" rel="apple-touch-icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&amp;family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -15,6 +19,16 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body, p, h1, h2, h3, h4, span, div, a, button {
+      -webkit-touch-callout: none;
+    }
+
+    .non-selectable {
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     :root {
@@ -55,6 +69,8 @@
       overflow-x: hidden;
       max-width: 100vw;
       width: 100%;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     body {
@@ -65,6 +81,8 @@
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       box-sizing: border-box;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     /* Subtle paper noise texture simulation */
@@ -87,6 +105,42 @@
     img {
       max-width: 100%;
       display: block;
+    }
+
+    /* ==========================================================================
+       STUDIO GHIBLI CLICK / TAP RIPPLE & SPARKLE ANIMATION
+       ========================================================================== */
+    .ghibli-click-ripple {
+      position: fixed;
+      pointer-events: none;
+      z-index: 99999;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      animation: ghibli-ripple-expand 0.6s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+    }
+
+    @keyframes ghibli-ripple-expand {
+      0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.95;
+        border: 2.5px solid var(--ripple-color, #C28E3A);
+        box-shadow: 0 0 10px var(--ripple-glow, rgba(194, 142, 58, 0.7)),
+                    inset 0 0 8px var(--ripple-glow, rgba(194, 142, 58, 0.5));
+      }
+      60% {
+        opacity: 0.6;
+        border-width: 1.5px;
+      }
+      100% {
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+        border: 1px solid var(--ripple-color, #C28E3A);
+        box-shadow: 0 0 25px var(--ripple-glow, rgba(194, 142, 58, 0)),
+                    inset 0 0 15px var(--ripple-glow, rgba(194, 142, 58, 0));
+        transform: translate(-50%, -50%) scale(1.15);
+      }
     }
 
     /* ==========================================================================
@@ -137,10 +191,21 @@
     }
 
     .nav-brand-leaf {
-      color: var(--accent-moss);
-      font-size: 1.05rem;
-      transition: transform 0.3s ease;
-      display: inline-block;
+      width: 26px;
+      height: 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.35s ease;
+      flex-shrink: 0;
+    }
+
+    .nav-brand-leaf img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+      filter: drop-shadow(0 1px 3px rgba(46, 83, 57, 0.3));
     }
 
     .nav-brand-logo:hover .nav-brand-leaf {
@@ -742,6 +807,33 @@
       transform: scale(1.05);
     }
 
+    /* Sky toggle placement: positioned at top-left relative to outer photo card */
+    .hero-portrait-card .sky-toggle-nav-btn {
+      position: absolute;
+      top: 12px;
+      left: -16px;
+      z-index: 40;
+      background: #FFFFFF;
+      border: 1px solid rgba(220, 210, 190, 0.85);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+      border-radius: 9999px;
+      padding: 0.45rem 1rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #2D3748;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+    }
+
+    .hero-portrait-card .sky-toggle-nav-btn:hover {
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+    }
+
     /* ==========================================================================
        COMMON EDITORIAL SECTION STYLING (PAGE 2, 3, 4, 5)
        ========================================================================== */
@@ -1286,10 +1378,11 @@
       }
       .nav-brand-logo {
         font-size: 1rem !important;
-        gap: 0.4rem !important;
+        gap: 0.45rem !important;
       }
       .nav-brand-leaf {
-        font-size: 0.95rem !important;
+        width: 22px !important;
+        height: 22px !important;
       }
       .nav-menu-links {
         gap: 0.75rem !important;
@@ -1336,6 +1429,14 @@
       .portrait-round-halo {
         width: 230px !important;
         height: 230px !important;
+      }
+
+      /* Mobile placement for sky toggle button */
+      .hero-portrait-card .sky-toggle-nav-btn {
+        top: 0px !important;
+        left: -8px !important;
+        padding: 0.32rem 0.75rem !important;
+        font-size: 0.78rem !important;
       }
 
       /* Enforce single-row layout for the 3 hero action buttons on mobile */
@@ -1545,14 +1646,19 @@
       .skill-badge-animated {
         animation: none !important;
       }
+      .ghibli-click-ripple {
+        display: none !important;
+      }
     }
   </style>
 </head>
-<body>
+<body class="non-selectable">
 <!-- ================= STUDIO GHIBLI STYLED UNIFIED TOP NAVIGATION BAR (MATCHING REFERENCE IMAGE) ================= -->
-<header class="ghibli-navbar" id="ghibliNavbar">
+<header class="ghibli-navbar non-selectable" id="ghibliNavbar">
 <a class="nav-brand-logo" href="#hero">
-<span class="nav-brand-leaf">🍃</span>
+<span class="nav-brand-leaf">
+<img alt="Leaf Logo" src="https://lh3.googleusercontent.com/aida/AEtjO1X0885yTzrSFHhqaDW1KoUjTUuYp9k9pPeuulRlp3Sig8smFUgKsUWE3D9rf8BoDPYQPtHFRlmBjrdXeUIplJD41gaxEB7clwG0dbOif28mTDOhuNvPaM31ugbk7MMAkKeYXVwo_gY0CJebtJSeCzg_FTPxjZYIVq8jzrUsYKIIw498V_Kucigv0UJ1jnxi3d7Wd4uS0W0uFdVlzu2WfHSBpbaZugXecMHSLtRQBzHYNMDHtXfP9DhT2w"/>
+</span>
 <span class="">Pratham R.</span>
 </a>
 <nav aria-label="Main Navigation">
@@ -1565,7 +1671,7 @@
 </nav>
 </header>
 <!-- Side Dot Indicators for Slide Jumping -->
-<aside aria-label="Slide Indicators" class="slide-nav-dots">
+<aside aria-label="Slide Indicators" class="slide-nav-dots non-selectable">
 <a aria-label="Slide 1 Hero" class="slide-dot active" href="#hero" title="Hero Screen"></a>
 <a aria-label="Slide 2 About" class="slide-dot" href="#about" title="About Screen"></a>
 <a aria-label="Slide 3 Skills" class="slide-dot" href="#skills" title="Skills Screen"></a>
@@ -1573,7 +1679,7 @@
 <a aria-label="Slide 5 Contact" class="slide-dot" href="#contact" title="Contact Screen"></a>
 </aside>
 <!-- ================= PAGE 1 / SECTION 1: HERO SECTION ================= -->
-<section class="viewport-slide hero-slide" id="hero">
+<section class="viewport-slide hero-slide non-selectable" id="hero">
 <!-- Dynamic Sky Scene (Crossfades on Toggle) -->
 <div class="sky-stage" id="skyStage">
 <!-- Day Sky Gradient -->
@@ -1653,14 +1759,14 @@
 <div class="hero-portrait-card" style="position: relative; display: flex; justify-content: center; align-items: center; overflow: visible;">
 <div class="portrait-round-halo"></div>
 <div class="portrait-image-wrapper round-frame">
-<img alt="Pratham Kirtibhai Rangoonwala - MSc IT Student &amp; Aspiring Data Scientist" class="portrait-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-_34W7Jr-2tsUqi5SVaeVMEXD-m1PWgb3psIxQEfW7FbQDqOAdriQivyMZDcWFsnnuWrBmMloQVOEhW-yfmoRku1r58HxwA0QkjkfUSvJ57do0xCCFCoTpT5b7_A428is8z8Jr8kBGUt5p4U23nb-RJbQMF2SM4qc7TFQXJCjbgXJmjRoiSO2rxb_PEF3yo-LxPSZuIYAPsArzXEtIvetNs7_h2EbadFyFv-jpt4VDUEJtjqCTjPvJB1px5efvc4zbQ"/>
+<img alt="Pratham Kirtibhai Rangoonwala - MSc IT Student &amp; Aspiring Data Scientist" class="portrait-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKdy_riAHkfn6Qj8x2ZMos8h6EFVPO7zhr35g3NZCGHg8F7npfqU-Z0i_OxM5WmGTvQCSnI6bZWk7tnwLQHjDOGOgIOGuhduTfg6KDJZBFhBhGcLswt5gMihEAppFXNkIFHAIqPcqZtXcRPeEG56X9k91v_Y0f-Wey7jwyezrp2kElmfpZt3rEwu0Yx6wJgdEv5HXEM64Gew4Ab0GWjO1Bx7DJc6yurIBz26WyXu1DFGwE6QU_rsFoe1_DqkPqfKIXmw"/>
 </div>
-<button aria-label="Toggle between Day and Night sky theme" class="sky-toggle-nav-btn" id="skyToggleBtn" style="position: absolute; bottom: -10px; right: -10px; z-index: 40; background: rgb(255, 255, 253); border: 1px solid rgba(220, 210, 190, 0.85); box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 14px; border-radius: 9999px; padding: 0.4rem 0.95rem; font-size: 0.84rem; font-weight: 600; color: rgb(45, 55, 72); display: inline-flex; align-items: center; gap: 0.45rem; cursor: pointer; white-space: nowrap;"><span class="">🌙 Night Sky</span></button></div>
+<button aria-label="Toggle between Day and Night sky theme" class="sky-toggle-nav-btn" id="skyToggleBtn"><span class="">🌙 Night Sky</span></button></div>
 </div>
 </div>
 </section>
 <!-- ================= PAGE 2 / SECTION 2: ABOUT ME ================= -->
-<section class="viewport-slide about-slide" id="about">
+<section class="viewport-slide about-slide non-selectable" id="about">
 <div class="slide-inner-container">
 <div class="section-header-wrap">
 <span class="section-eyebrow">01 / The Story</span>
@@ -1708,7 +1814,7 @@
 </div>
 </section>
 <!-- ================= PAGE 3 / SECTION 3: SKILLS & TECHNOLOGIES ================= -->
-<section class="viewport-slide skills-slide" id="skills">
+<section class="viewport-slide skills-slide non-selectable" id="skills">
 <div class="slide-inner-container">
 <div class="section-header-wrap">
 <span class="section-eyebrow">02 / Toolkit</span>
@@ -1872,7 +1978,7 @@
 </div>
 </section>
 <!-- ================= PAGE 4 / SECTION 4: WHAT I'M WORKING ON / PROJECTS ================= -->
-<section class="viewport-slide focus-slide" id="projects">
+<section class="viewport-slide focus-slide non-selectable" id="projects">
 <div class="slide-inner-container">
 <div class="section-header-wrap">
 <span class="section-eyebrow">03 / Active Pursuits</span>
@@ -1916,7 +2022,7 @@
 </div>
 </section>
 <!-- ================= PAGE 5 / SECTION 5: CONTACT & FOOTER ================= -->
-<section class="viewport-slide contact-slide" id="contact">
+<section class="viewport-slide contact-slide non-selectable" id="contact">
 <div class="slide-inner-container contact-content-box">
 <div class="footer-main-grid">
 <div>
@@ -1975,17 +2081,16 @@
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
     // Day / Night Toggle Handler for Hero & Top Navbar
+    let isCurrentNight = false;
     (function(){
       const btn = document.getElementById('skyToggleBtn');
       const hero = document.getElementById('hero');
       const nav = document.getElementById('ghibliNavbar');
       if(!btn || !hero) return;
 
-      let isNight = false;
-
       function updateState(){
-        btn.innerHTML = isNight ? '<span>☀️ Day Sky</span>' : '<span>🌙 Night Sky</span>';
-        if(isNight) {
+        btn.innerHTML = isCurrentNight ? '<span>☀️ Day Sky</span>' : '<span>🌙 Night Sky</span>';
+        if(isCurrentNight) {
           hero.classList.add('is-night');
           if(nav) nav.classList.add('is-night-nav');
         } else {
@@ -1997,7 +2102,7 @@
 
       btn.addEventListener('click', function(e){
         e.stopImmediatePropagation();
-        isNight = !isNight;
+        isCurrentNight = !isCurrentNight;
         updateState();
       }, true);
     })();
@@ -2034,5 +2139,29 @@
     });
 
     slides.forEach(slide => observer.observe(slide));
+
+    // Studio Ghibli Nature & Starlight Click / Tap Ripple Effect
+    document.addEventListener('pointerdown', function(e) {
+      // Don't trigger for right clicks
+      if (e.button === 2) return;
+      
+      const ripple = document.createElement('div');
+      ripple.className = 'ghibli-click-ripple';
+      ripple.style.left = e.clientX + 'px';
+      ripple.style.top = e.clientY + 'px';
+
+      if (isCurrentNight) {
+        ripple.style.setProperty('--ripple-color', '#92C0A5');
+        ripple.style.setProperty('--ripple-glow', 'rgba(146, 192, 165, 0.6)');
+      } else {
+        ripple.style.setProperty('--ripple-color', '#C28E3A');
+        ripple.style.setProperty('--ripple-glow', 'rgba(194, 142, 58, 0.5)');
+      }
+
+      document.body.appendChild(ripple);
+      setTimeout(() => {
+        if (ripple.parentNode) ripple.parentNode.removeChild(ripple);
+      }, 600);
+    }, { passive: true });
 </script>
 </body></html>
